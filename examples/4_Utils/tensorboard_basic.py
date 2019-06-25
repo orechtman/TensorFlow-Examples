@@ -10,6 +10,7 @@ Project: https://github.com/aymericdamien/TensorFlow-Examples/
 from __future__ import print_function
 
 import tensorflow as tf
+from trains import Task
 
 # Import MNIST data
 from tensorflow.examples.tutorials.mnist import input_data
@@ -21,6 +22,9 @@ training_epochs = 25
 batch_size = 100
 display_epoch = 1
 logs_path = '/tmp/tensorflow_logs/example/'
+
+# Connect to trains
+task = Task.init(project_name="My First Project", task_name='TensorBoard basic')
 
 # tf Graph Input
 # mnist data image of shape 28*28=784
